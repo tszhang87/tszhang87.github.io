@@ -1,0 +1,6 @@
+---
+layout: default
+title: Writing
+permalink: /writing/
+---
+<section class="hero"><p class="eyebrow">Notes from the workbench</p><h1>Writing</h1><p class="intro">Ideas, tradeoffs, and lessons from building infrastructure.</p></section><section class="archive" aria-label="Articles">{% for post in site.posts %}<a class="post" href="{{ post.url | relative_url }}"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%b %-d, %Y' }}</time><h2>{{ post.title | escape }}</h2><p>{{ post.description | escape }}</p></a>{% else %}<div class="empty"><h2>A space for thinking in public.</h2><p>No posts yet. Future notes will explore distributed systems, network infrastructure, and engineering decisions.</p></div>{% endfor %}</section>

@@ -1,0 +1,4 @@
+---
+layout: default
+---
+<article class="article"><a href="{{ '/writing/' | relative_url }}">← All writing</a><p class="eyebrow">{{ page.date | date: '%B %-d, %Y' }}{% if page.category %} / {{ page.category | escape }}{% endif %}</p><h1>{{ page.title | escape }}</h1>{% if page.description %}<p class="intro">{{ page.description | escape }}</p>{% endif %}<div class="prose">{{ content }}</div></article>

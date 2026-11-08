@@ -1,0 +1,8 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.title %}{{ page.title | escape }} · {% endif %}{{ site.title | escape }}</title>
+<meta name="description" content="{{ page.description | default: site.description | escape }}">
+<link rel="canonical" href="{{ page.url | absolute_url }}"><link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}"></head>
+<body><a class="skip" href="#main">Skip to content</a>
+<header class="wrap"><a class="brand" href="{{ '/' | relative_url }}">Tiansheng Zhang<span>.</span></a><nav aria-label="Main navigation"><a href="{{ '/#about' | relative_url }}">About</a><a href="{{ '/#research' | relative_url }}">Research</a><a href="{{ '/#engineering' | relative_url }}">Engineering</a><a href="{{ '/writing/' | relative_url }}">Writing</a></nav></header>
+<main id="main" class="wrap">{{ content }}</main><footer class="wrap"><span>© {{ 'now' | date: '%Y' }} Tiansheng Zhang</span><a href="https://github.com/tszhang87">GitHub ↗</a><a href="https://www.linkedin.com/in/tiansheng-z-8488a629/">LinkedIn ↗</a><a href="https://scholar.google.com/citations?user=aIS1B_4AAAAJ&amp;hl=en">Scholar ↗</a><span>Views are my own.</span></footer></body></html>

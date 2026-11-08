@@ -2,4 +2,11 @@
 
 .profile-links{display:flex;gap:25px;flex-wrap:wrap}.paper h3{max-width:670px}.paper a{font-size:14px}
 
-.hero:has(.profile-photo){display:grid;grid-template-columns:minmax(0,1fr) 230px;column-gap:48px;align-items:start}.profile-photo{width:230px;height:230px;object-fit:cover;border-radius:50%;border:5px solid var(--soft);margin-top:45px}.hero:has(.profile-photo) h1{font-size:clamp(38px,4.6vw,56px)}.hero .meta{grid-column:1/-1}@media(max-width:800px){.hero:has(.profile-photo){grid-template-columns:minmax(0,1fr) 160px;column-gap:24px}.profile-photo{width:160px;height:160px}}@media(max-width:600px){.hero:has(.profile-photo){grid-template-columns:1fr}.profile-photo{grid-row:1;width:150px;height:150px;margin:0 0 28px}.hero-content{grid-row:2}.hero .meta{grid-row:3}}
+/* Keep the portrait to the left of the introduction at every width. */
+.hero:has(.profile-photo){display:grid;grid-template-columns:230px minmax(0,1fr);column-gap:48px;align-items:start}
+.profile-photo{grid-column:1;grid-row:1;width:230px;height:230px;object-fit:cover;border-radius:50%;border:5px solid var(--soft);margin-top:45px}
+.hero-content{grid-column:2;grid-row:1;min-width:0}
+.hero:has(.profile-photo) h1{font-size:clamp(34px,4.6vw,56px)}
+.hero .meta{grid-column:1/-1;grid-row:2}
+@media(max-width:800px){.hero:has(.profile-photo){grid-template-columns:160px minmax(0,1fr);column-gap:24px}.profile-photo{width:160px;height:160px}.hero .actions{flex-wrap:wrap;gap:16px}}
+@media(max-width:600px){.hero:has(.profile-photo){grid-template-columns:90px minmax(0,1fr);column-gap:18px}.profile-photo{width:90px;height:90px;margin-top:4px;border-width:3px}.hero:has(.profile-photo) h1{font-size:30px;letter-spacing:-1px}.hero .intro{font-size:16px}.hero .eyebrow{font-size:10px;letter-spacing:1px}.hero .actions{font-size:13px}.hero .button{padding:10px 12px}}
